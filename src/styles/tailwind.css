@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  --primary: #2563EB;
+  --primary-foreground: #FFFFFF;
+  --secondary: #EFF6FF;
+  --secondary-foreground: #1E40AF;
+  --accent: #16A34A;
+  --accent-foreground: #FFFFFF;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #2563EB;
+  --radius: 10px;
+  --font-sans: var(--font-plus-jakarta-sans), sans-serif;
+  --warning: #EA580C;
+  --warning-foreground: #FFFFFF;
+  --danger: #DC2626;
+  --danger-foreground: #FFFFFF;
+  --success: #16A34A;
+  --success-foreground: #FFFFFF;
+  --navy: #1E3A5F;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+  .text-hero-metric {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .sidebar-transition {
+    transition: width 300ms ease, transform 300ms ease;
+  }
+  .card-hover {
+    transition: box-shadow 150ms ease, transform 150ms ease;
+  }
+  .card-hover:hover {
+    box-shadow: 0 4px 16px 0 rgba(37,99,235,0.10);
+    transform: translateY(-1px);
+  }
+  .row-fade-out {
+    transition: opacity 200ms ease, max-height 250ms ease;
+    overflow: hidden;
+  }
+  .skeleton-pulse {
+    background: linear-gradient(90deg, #F1F5F9 25%, #E2E8F0 50%, #F1F5F9 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  .modal-backdrop {
+    animation: fadeIn 150ms ease forwards;
+  }
+  .modal-panel {
+    animation: scaleIn 150ms ease forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .bulk-bar-slide {
+    animation: slideUp 200ms ease forwards;
+  }
+  @keyframes slideUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .receipt-slide {
+    animation: slideFromRight 200ms ease forwards;
+  }
+  @keyframes slideFromRight {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  .low-stock-row {
+    border-left: 3px solid var(--warning);
+  }
+  .critical-stock-row {
+    border-left: 3px solid var(--danger);
+  }
+}
