@@ -9,12 +9,12 @@ const STATUS_STYLES: Record<string, string> = {
   'Out of Stock': 'bg-red-50 text-red-700 border border-red-200',
   Discontinued: 'bg-slate-100 text-slate-500 border border-slate-200',
   Completed: 'bg-green-50 text-green-700 border border-green-200',
-  Pending: 'bg-blue-50 text-blue-700 border border-blue-200',
+  Pending: 'bg-primary/5 text-primary border border-primary/20',
   Refunded: 'bg-orange-50 text-orange-700 border border-orange-200',
   Voided: 'bg-slate-100 text-slate-500 border border-slate-200',
   warning: 'bg-amber-50 text-amber-700 border border-amber-200',
   critical: 'bg-red-50 text-red-700 border border-red-200',
-  info: 'bg-blue-50 text-blue-700 border border-blue-200',
+  info: 'bg-primary/5 text-primary border border-primary/20',
 };
 
 interface StatusBadgeProps {

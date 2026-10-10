@@ -29,7 +29,7 @@ export default function RecentTransactionsTable() {
         </div>
         <Link
           href="/reports"
-          className="flex items-center gap-1.5 text-xs font-600 text-primary hover:text-blue-700 transition-colors"
+          className="flex items-center gap-1.5 text-xs font-600 text-primary hover:opacity-75 transition-opacity"
         >
           View all <ArrowRight size={13} />
         </Link>

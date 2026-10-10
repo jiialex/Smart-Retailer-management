@@ -242,7 +242,7 @@ export default function CartPanel({
             <button
               onClick={onProcessSale}
               disabled={processing || (paymentMethod === 'Cash' && cashTendered < total)}
-              className="w-full flex items-center justify-center gap-2 py-3 bg-primary text-white text-sm font-700 rounded-xl hover:bg-blue-700 transition-all duration-150 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed shadow-card-md"
+              className="w-full flex items-center justify-center gap-2 py-3 bg-primary text-white text-sm font-700 rounded-xl hover:brightness-90 transition-all duration-150 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed shadow-card-md"
             >
               {processing ? (
                 <><Loader2 size={16} className="animate-spin" /> Processing…</>

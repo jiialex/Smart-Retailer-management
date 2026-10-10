@@ -23,7 +23,7 @@ export interface CompletedSale {
 
 const TAX_RATE = 0.08;
 
-export default function CheckoutContent() {
+export default function CheckoutContent({ cashierName = 'Marcus Okafor' }: { cashierName?: string }) {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [discountType, setDiscountType] = useState<'percent' | 'fixed'>('percent');
   const [discountValue, setDiscountValue] = useState<number>(0);
@@ -110,7 +110,7 @@ export default function CheckoutContent() {
       paymentMethod,
       cashTendered: paymentMethod === 'Cash' ? cashTendered : undefined,
       change: paymentMethod === 'Cash' ? change : undefined,
-      cashier: 'Marcus Okafor',
+      cashier: cashierName,
       timestamp: new Date().toISOString(),
     };
 
@@ -126,7 +126,7 @@ export default function CheckoutContent() {
       {/* Header */}
       <div>
         <h1 className="text-2xl font-600 text-foreground">Sales Checkout</h1>
-        <p className="text-sm text-muted-foreground mt-0.5">Cashier: Marcus Okafor · Register #1 · Oct 9, 2026</p>
+        <p className="text-sm text-muted-foreground mt-0.5">Cashier: {cashierName} · Register #1</p>
       </div>
 
       {/* Split layout */}

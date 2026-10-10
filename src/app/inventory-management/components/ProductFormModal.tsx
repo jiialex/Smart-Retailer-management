@@ -254,7 +254,7 @@ export default function ProductFormModal({ open, onClose, product, categories, o
           <button
             type="submit"
             disabled={saving}
-            className="flex items-center gap-2 px-5 py-2 bg-primary text-white text-sm font-600 rounded-lg hover:bg-blue-700 transition-colors active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed min-w-[110px] justify-center"
+            className="flex items-center gap-2 px-5 py-2 bg-primary text-white text-sm font-600 rounded-lg hover:brightness-90 transition-colors active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed min-w-[110px] justify-center"
           >
             {saving ? (
               <><Loader2 size={15} className="animate-spin" /> Saving…</>

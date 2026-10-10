@@ -3,7 +3,7 @@ import DashboardContent from "@/components/DashboardContent";
 
 export default function DashboardPage() {
   return (
-    <AppLayout currentPath="/">
+    <AppLayout currentPath="/" compact>
       <DashboardContent />
     </AppLayout>
   );

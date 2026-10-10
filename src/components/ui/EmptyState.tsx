@@ -50,7 +50,7 @@ export default function EmptyState({ type, onCta }: EmptyStateProps) {
       {config.cta && onCta && (
         <button
           onClick={onCta}
-          className="mt-5 px-4 py-2 bg-primary text-white text-sm font-600 rounded-lg hover:bg-blue-700 transition-colors active:scale-95"
+          className="mt-5 px-4 py-2 bg-primary text-white text-sm font-600 rounded-lg hover:brightness-90 transition-colors active:scale-95"
         >
           {config.cta}
         </button>

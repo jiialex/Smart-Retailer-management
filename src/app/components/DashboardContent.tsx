@@ -10,11 +10,11 @@ export default function DashboardContent() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-600 text-foreground">Dashboard</h1>
-          <p className="text-sm text-muted-foreground mt-0.5">Friday, October 9, 2026 · Store #001 — Downtown</p>
+          <p className="text-sm text-muted-foreground mt-0.5">Friday, October 10, 2026 · Store rgb(41, 41, 45) — Downtown</p>
         </div>
         <div className="flex items-center gap-2">
           <span className="text-xs text-muted-foreground bg-muted px-3 py-1.5 rounded-lg font-500">Today: Oct 9</span>
-          <button className="text-xs bg-primary text-white px-3 py-1.5 rounded-lg font-600 hover:bg-blue-700 transition-colors active:scale-95">
+          <button className="text-xs bg-primary text-white px-3 py-1.5 rounded-lg font-600 hover:brightness-90 transition-colors active:scale-95">
             Export Report
           </button>
         </div>

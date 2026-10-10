@@ -23,7 +23,7 @@ function CustomTooltip({ active, payload, label }: { active?: boolean; payload?:
 }
 
 const BAR_COLORS = [
-  'var(--primary)', '#3B82F6', '#60A5FA', '#93C5FD',
+  'var(--primary)', '#232F3E', '#232F3E', '#232F3E',
   'var(--accent)', '#22C55E', '#4ADE80', '#86EFAC',
 ];
 

@@ -58,7 +58,7 @@ export default function StockAlertsPanel() {
       <div className="px-5 py-3 border-t border-border">
         <Link
           href="/inventory-management"
-          className="flex items-center gap-1.5 text-xs font-600 text-primary hover:text-blue-700 transition-colors"
+          className="flex items-center gap-1.5 text-xs font-600 text-primary hover:opacity-75 transition-opacity"
         >
           View all inventory <ArrowRight size={13} />
         </Link>

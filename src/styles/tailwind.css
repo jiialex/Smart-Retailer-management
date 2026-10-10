@@ -5,10 +5,10 @@
 :root {
   --background: #F8FAFC;
   --foreground: #0F172A;
-  --primary: #2563EB;
+  --primary: #232F3E;
   --primary-foreground: #FFFFFF;
-  --secondary: #EFF6FF;
-  --secondary-foreground: #1E40AF;
+  --secondary: #F1F5F9;
+  --secondary-foreground: #232F3E;
   --accent: #16A34A;
   --accent-foreground: #FFFFFF;
   --muted: #F1F5F9;
@@ -17,7 +17,7 @@
   --card-foreground: #0F172A;
   --border: #E2E8F0;
   --input: #E2E8F0;
-  --ring: #2563EB;
+  --ring: #232F3E;
   --radius: 10px;
   --font-sans: var(--font-plus-jakarta-sans), sans-serif;
   --warning: #EA580C;
@@ -26,7 +26,7 @@
   --danger-foreground: #FFFFFF;
   --success: #16A34A;
   --success-foreground: #FFFFFF;
-  --navy: #1E3A5F;
+  --navy: #232F3E;
 }
 
 @layer base {
@@ -64,7 +64,7 @@
     transition: box-shadow 150ms ease, transform 150ms ease;
   }
   .card-hover:hover {
-    box-shadow: 0 4px 16px 0 rgba(37,99,235,0.10);
+    box-shadow: 0 4px 16px 0 rgba(35,47,62,0.10);
     transform: translateY(-1px);
   }
   .row-fade-out {

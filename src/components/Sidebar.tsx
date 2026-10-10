@@ -13,11 +13,10 @@ import {
   Brain,
   ShieldCheck,
   Factory,
-  Settings,
-  Users,
   LogOut,
 } from 'lucide-react';
 import Icon from '@/components/ui/AppIcon';
+import { toast } from 'sonner';
 
 
 interface NavItem {
@@ -34,11 +33,9 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'nav-inventory', label: 'Inventory', href: '/inventory-management', icon: Package, badge: 5, group: 'main' },
   { id: 'nav-checkout', label: 'Sales Checkout', href: '/sales-checkout', icon: ShoppingCart, group: 'main' },
   { id: 'nav-reports', label: 'Reports', href: '/reports', icon: BarChart3, group: 'analytics' },
-  { id: 'nav-forecast', label: 'AI Forecasting', href: '/forecasting', icon: Brain, group: 'analytics' },
+  { id: 'nav-forecast', label: 'AI Forecasting', href: '/ai-forecasting', icon: Brain, group: 'analytics' },
   { id: 'nav-verify', label: 'Authenticity', href: '/authenticity', icon: ShieldCheck, group: 'analytics' },
   { id: 'nav-manufacturer', label: 'Manufacturer', href: '/manufacturer', icon: Factory, group: 'admin' },
-  { id: 'nav-users', label: 'Users', href: '/users', icon: Users, group: 'admin' },
-  { id: 'nav-settings', label: 'Settings', href: '/settings', icon: Settings, group: 'admin' },
 ];
 
 const GROUP_LABELS: Record<string, string> = {
@@ -57,6 +54,7 @@ interface SidebarProps {
 
 export default function Sidebar({ collapsed, mobileOpen, onMobileClose, onToggleCollapse, currentPath }: SidebarProps) {
   const groups = ['main', 'analytics', 'admin'];
+  const handleSignOut = () => toast.info('Sign out is not configured for this demo.');
 
   const isActive = (href: string) => {
     if (href === '/') return currentPath === '/';
@@ -99,7 +97,7 @@ export default function Sidebar({ collapsed, mobileOpen, onMobileClose, onToggle
                           title={collapsed ? item.label : undefined}
                           className={`flex items-center gap-3 rounded-lg px-2 py-2 text-sm font-500 transition-all duration-150 group relative
                             ${active
-                              ? 'bg-primary text-white' :'text-white/70 hover:bg-white/10 hover:text-white'
+                              ? 'bg-white/10 text-white ring-1 ring-inset ring-white/10' :'text-white/70 hover:bg-white/10 hover:text-white'
                             }
                             ${collapsed ? 'justify-center' : ''}
                           `}
@@ -139,7 +137,7 @@ export default function Sidebar({ collapsed, mobileOpen, onMobileClose, onToggle
           >
             {collapsed ? <ChevronRight size={18} /> : <><ChevronLeft size={18} /><span className="text-sm font-500">Collapse</span></>}
           </button>
-          <button className="w-full flex items-center gap-3 rounded-lg px-2 py-2 text-sm text-white/60 hover:bg-white/10 hover:text-white transition-all duration-150">
+          <button onClick={handleSignOut} className="w-full flex items-center gap-3 rounded-lg px-2 py-2 text-sm text-white/60 hover:bg-white/10 hover:text-white transition-all duration-150">
             <LogOut size={18} />
             {!collapsed && <span>Sign Out</span>}
           </button>
@@ -196,7 +194,7 @@ export default function Sidebar({ collapsed, mobileOpen, onMobileClose, onToggle
           })}
         </nav>
         <div className="border-t border-white/10 p-2">
-          <button className="w-full flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-white/60 hover:bg-white/10 hover:text-white transition-all duration-150">
+          <button onClick={handleSignOut} className="w-full flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-white/60 hover:bg-white/10 hover:text-white transition-all duration-150">
             <LogOut size={18} />
             <span>Sign Out</span>
           </button>

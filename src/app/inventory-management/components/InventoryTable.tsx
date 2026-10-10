@@ -153,7 +153,7 @@ export default function InventoryTable({
                       <button
                         onClick={() => onEdit(product)}
                         title={`Edit ${product.name}`}
-                        className="p-1.5 rounded-lg text-muted-foreground hover:bg-blue-50 hover:text-primary transition-colors"
+                        className="p-1.5 rounded-lg text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors"
                         aria-label={`Edit ${product.name}`}
                       >
                         <Edit2 size={15} />

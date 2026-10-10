@@ -34,7 +34,7 @@ const KPI_DATA: KpiCardData[] = [
     change: '+12.4% vs yesterday',
     changePositive: true,
     icon: DollarSign,
-    iconBg: 'bg-blue-50',
+    iconBg: 'bg-primary/5',
     iconColor: 'text-primary',
     isHero: true,
     subValue: 'Target: $4,000',
@@ -58,8 +58,8 @@ const KPI_DATA: KpiCardData[] = [
     change: '+5.2% vs yesterday',
     changePositive: true,
     icon: ShoppingBag,
-    iconBg: 'bg-indigo-50',
-    iconColor: 'text-indigo-600',
+    iconBg: 'bg-slate-100',
+    iconColor: 'text-primary',
   },
   {
     id: 'kpi-avg-txn',
@@ -110,7 +110,7 @@ function HeroCard({ data }: { data: KpiCardData }) {
             </div>
             <div className="h-1.5 rounded-full bg-white/20 overflow-hidden">
               <div
-                className="h-full rounded-full bg-blue-400 transition-all duration-500"
+                className="h-full rounded-full bg-primary transition-all duration-500"
                 style={{ width: `${pct}%` }}
               />
             </div>

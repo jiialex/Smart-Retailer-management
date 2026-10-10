@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Plus, Download } from 'lucide-react';
 import { toast } from 'sonner';
 import { PRODUCTS, CATEGORIES } from '@/data/mockData';
@@ -22,6 +22,11 @@ export default function InventoryContent() {
   const [deleteProduct, setDeleteProduct] = useState<Product | null>(null);
   const [page, setPage] = useState(1);
   const PER_PAGE = 10;
+
+  useEffect(() => {
+    const initialSearch = new URLSearchParams(window.location.search).get('search');
+    if (initialSearch) setSearch(initialSearch);
+  }, []);
 
   const filtered = useMemo(() => {
     let list = [...products];
@@ -114,7 +119,7 @@ export default function InventoryContent() {
           </button>
           <button
             onClick={() => setAddModalOpen(true)}
-            className="flex items-center gap-1.5 px-4 py-2 bg-primary text-white text-sm font-600 rounded-lg hover:bg-blue-700 transition-colors active:scale-95"
+            className="flex items-center gap-1.5 px-4 py-2 bg-primary text-white text-sm font-600 rounded-lg hover:brightness-90 transition-colors active:scale-95"
           >
             <Plus size={16} />
             Add Product

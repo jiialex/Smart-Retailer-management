@@ -88,7 +88,7 @@ export default function ProductSearchPanel({ products, onAddToCart, cart }: Prop
                   key={`checkout-prod-${product.id}`}
                   onClick={() => onAddToCart(product)}
                   className={`relative text-left rounded-xl border p-3.5 transition-all duration-150 hover:shadow-card-md hover:border-primary/40 active:scale-95 group
-                    ${inCart > 0 ? 'border-primary/50 bg-blue-50/40' : 'border-border bg-card hover:bg-muted/20'}
+                    ${inCart > 0 ? 'border-primary/50 bg-primary/5' : 'border-border bg-card hover:bg-muted/20'}
                     ${isLow ? 'border-amber-200' : ''}
                   `}
                   aria-label={`Add ${product.name} to cart`}

@@ -1,13 +1,13 @@
 import type { Product, Transaction, StockAlert, Category } from '@/types';
 
 export const CATEGORIES: Category[] = [
-  { id: 'cat-001', name: 'Beverages', color: '#2563EB' },
+  { id: 'cat-001', name: 'Beverages', color: '#232F3E' },
   { id: 'cat-002', name: 'Snacks', color: '#EA580C' },
   { id: 'cat-003', name: 'Dairy', color: '#16A34A' },
   { id: 'cat-004', name: 'Bakery', color: '#D97706' },
   { id: 'cat-005', name: 'Personal Care', color: '#7C3AED' },
-  { id: 'cat-006', name: 'Household', color: '#0891B2' },
-  { id: 'cat-007', name: 'Frozen', color: '#0284C7' },
+  { id: 'cat-006', name: 'Household', color: '#232F3E' },
+  { id: 'cat-007', name: 'Frozen', color: '#232F3E' },
   { id: 'cat-008', name: 'Produce', color: '#15803D' },
 ];
 

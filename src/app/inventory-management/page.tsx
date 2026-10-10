@@ -1,10 +1,10 @@
 import React from 'react';
-import AppLayout from '@/app/components/AppLayout';
+import AppLayout from '@/components/AppLayout';
 import InventoryContent from './components/InventoryContent';
 
 export default function InventoryManagementPage() {
   return (
-    <AppLayout>
+    <AppLayout navigationMode="operations">
       <InventoryContent />
     </AppLayout>
   );

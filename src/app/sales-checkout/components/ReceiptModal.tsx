@@ -116,7 +116,7 @@ export default function ReceiptModal({ open, onClose, sale }: Props) {
           </button>
           <button
             onClick={onClose}
-            className="flex-1 py-2.5 bg-primary text-white text-sm font-600 rounded-lg hover:bg-blue-700 transition-colors active:scale-95"
+            className="flex-1 py-2.5 bg-primary text-white text-sm font-600 rounded-lg hover:brightness-90 transition-colors active:scale-95"
           >
             New Sale
           </button>
